@@ -8,7 +8,6 @@ const Products = () => {
     
     const isLoading = false;
     const errorMessage = "";
-
     const products = [
     {
       productId: 652,
