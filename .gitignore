@@ -31,3 +31,7 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# AI assistant guides (local only)
+AGENTS.md
+CLAUDE.md
