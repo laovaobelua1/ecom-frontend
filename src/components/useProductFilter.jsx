@@ -16,7 +16,7 @@ const useProductFilter = () => {
         const keyword = searchParams.get("keyword") || null;
         params.set("sortBy", "price");
         params.set("sortOrder", sortOrder);
-        params.set("pageNumber", currentPage - 1);
+        params.set("pageNumber", currentPage-1);
         if (categoryParams) {
             params.set("category", categoryParams);
         } 
@@ -28,7 +28,7 @@ const useProductFilter = () => {
 
         dispatch(fetchProducts(queryString))
         console.log("QUERY STRING", queryString);
-    }, [dispatch])
+    }, [searchParams, dispatch])
 
 }
 
