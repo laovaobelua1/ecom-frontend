@@ -33,6 +33,7 @@ const Filter = ({categories}) => {
             } else {
                 params.delete("keyword");
             }
+            params.delete("page"); // new results → start again from page 1
             navigate(`${pathname}?${params}`);
         }, 700);
 
@@ -49,12 +50,14 @@ const Filter = ({categories}) => {
         } else {
             params.set("category", selectedCategory);
         }
+        params.delete("page");
         navigate(`${pathname}?${params}`);
     }
 
     const toggleSortOrder = () => {
         const params = new URLSearchParams(searchParams);
         params.set("sortby", sortOrder === "asc" ? "desc" : "asc");
+        params.delete("page");
         navigate(`${pathname}?${params}`);
     }
 

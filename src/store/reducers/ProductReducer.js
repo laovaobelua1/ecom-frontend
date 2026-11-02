@@ -16,7 +16,7 @@ export const productReducer = (state = initialState, action) => {
                     pageSize: action.pageSize,
                     totalElements: action.totalElements,
                     totalPages: action.totalPages,
-                    lastPages: action.lastPages,
+                    lastPage: action.lastPage,
                 },
             };
         case "FETCH_CATEGORIES":

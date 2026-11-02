@@ -39,11 +39,11 @@ const ProductCard = ({
             }} className="w-full overflow-hidden aspect-3/2">
                 <img className="w-full h-full cursor-pointer transition-transform duration-300 transform hover:scale-105"
                 src={image}
-                alt={productName}>
-                </img>
+                alt={productName}
+                />
             </div>
             <div className="p-4">
-                <h2 onClick={()=>{()=> {
+                <h2 onClick={()=> {
                 handleProductView({
                     id: productId,
                     productName,
@@ -54,7 +54,7 @@ const ProductCard = ({
                     discount,
                     specialPrice
                 })
-            }}} className="text-lg font-semibold mb-2 cursor-pointer hover:scale-105">
+            }} className="text-lg font-semibold mb-2 cursor-pointer hover:scale-105">
                     {productName}
                 </h2>
 

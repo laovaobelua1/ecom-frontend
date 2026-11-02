@@ -13,7 +13,7 @@ export const fetchProducts = (queryString) => async (dispatch) => {
             pageSize: data.pageSize,
             totalElements: data.totalElements,
             totalPages: data.totalPages,
-            lastPages: data.lastPages,
+            lastPage: data.lastPage,
         });
         dispatch({type:"IS_SUCCESS"})
     } catch(error) {
@@ -25,7 +25,7 @@ export const fetchProducts = (queryString) => async (dispatch) => {
     
 }
 
-export const fetchCategories = (queryString) => async (dispatch) => {
+export const fetchCategories = () => async (dispatch) => {
     try {
         dispatch({
             type: "CATEGORY_LOADER"
@@ -38,12 +38,12 @@ export const fetchCategories = (queryString) => async (dispatch) => {
             pageSize: data.pageSize,
             totalElements: data.totalElements,
             totalPages: data.totalPages,
-            lastPages: data.lastPages,
+            lastPage: data.lastPage,
         });
         dispatch({type:"CATEGORY_SUCCESS"})
     } catch(error) {
         console.log(error);
-        dispatch({type:"IS_ERROR",
+        dispatch({type:"IS_CATEGORY_ERROR",
             payload: error?.response?.data?.message || "Failed to fetch categories",
         })
     }
